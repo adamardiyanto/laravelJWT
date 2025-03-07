@@ -12,6 +12,7 @@ Route::get('open', [App\Http\Controllers\DataController::class, 'open']);
 
 Route::group(['middleware' => JwtMiddleware::class], function() {
     Route::get('user', [App\Http\Controllers\UserController::class, 'getAuthenticatedUser']);
+    Route::get('logout', [App\Http\Controllers\UserController::class, 'logout']);
     Route::get('closed', [App\Http\Controllers\DataController::class, 'closed']);
 });
 
