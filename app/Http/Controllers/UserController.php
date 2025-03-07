@@ -25,9 +25,9 @@ class UserController extends Controller
 
         return response()->json([
             'success' => true,
-            'user'    => auth()->guard('api')->user(),
+            'user'    => JWTAuth::user(),
             'token'   => $token
-        ], 200);
+        ]);
     }
 
     public function logout(Request $request)
@@ -66,7 +66,7 @@ class UserController extends Controller
         return response()->json([
             'success' => true,
             'user'    => $user,
-        ], 201);
+        ]);
     }
 
     public function getAuthenticatedUser()
@@ -90,6 +90,6 @@ class UserController extends Controller
         return response()->json([
             'success' => true,
             'user'    => $user,
-        ], 200);
+        ]);
     }
 }

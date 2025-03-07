@@ -12,7 +12,7 @@ class DataController extends Controller
             return response()->json([
                 'success' => true,
                 'data'    => $data,
-            ], 200);
+            ]);
 
         }
 
@@ -22,7 +22,7 @@ class DataController extends Controller
             return response()->json([
                 'success' => true,
                 'data'    => $data,
-            ], 200);
+            ]);
         }
 }
 
